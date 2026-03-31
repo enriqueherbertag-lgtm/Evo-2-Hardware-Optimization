@@ -230,7 +230,7 @@ Mackiber Labs
 Contact: eaguayo@migst.cl  
 ORCID: 0009-0004-4615-6825  
 GitHub: [@enriqueherbertag-lgtm](https://github.com/enriqueherbertag-lgtm)
-
+Documentación asistida por **Ana (DeepSeek)** , IA para investigación y optimización técnica.
 ---
 
 *"Evo-2 7B is accessible. You don't need a $30,000 H100 to get started."*
