@@ -3,8 +3,6 @@
 “Este repositorio es un análisis técnico basado en benchmarks oficiales de NVIDIA y reportes de la comunidad. No incluye benchmarks propios ni código ejecutable todavía.”
 
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-
 **Making Evo-2 7B accessible on consumer GPUs. Honest analysis, real benchmarks, and practical limitations.**
 
 Evo-2 is a groundbreaking genomic AI from Arc Institute. While the 40B model requires enterprise GPUs (H100), the **7B model runs on consumer hardware** (RTX 4090/3090). This project analyzes what actually works, what doesn't, and where the real opportunities lie.
@@ -214,15 +212,6 @@ For a detailed discussion of limitations, see [docs/limitations.md](docs/limitat
 - Performance estimates need real-world validation
 
 ---
-
-## License
-
-CC BY-NC 4.0 (Attribution-NonCommercial 4.0 International)
-
-This project is for non‑commercial use. Commercial use requires a separate agreement.
-
----
-
 ## Author
 
 **Enrique Aguayo H.**  
