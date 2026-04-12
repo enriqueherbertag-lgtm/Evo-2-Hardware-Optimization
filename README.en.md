@@ -1,68 +1,85 @@
-# Asistente IA Geriátrico
+# Evo-2 7B on your GPU: Genomic AI for under USD 1,000
 
 [![License](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
-[![EN](https://img.shields.io/badge/English-version-blue.svg)](./README.en.md)
+[![ES](https://img.shields.io/badge/Spanish-version-green.svg)](./README.md)
 
-**Un dispositivo intra-auricular que habla con la voz de tu familia. Para adultos mayores con Alzheimer, demencia, retinopatía diabética y diabetes tipo 2.**
+**Why spend USD 30,000 on an H100 when you can run Evo-2 7B on a used RTX 3090 for USD 700–900?**
 
-No es un audífono. Es un compañero.
+This repository is a technical analysis based on official NVIDIA benchmarks and community reports. It does not include proprietary benchmarks or executable code yet.
 
-## ¿Qué problema resuelve?
+## What problem does it solve?
 
-Un adulto mayor con Alzheimer no puede leer la fecha de su medicamento. No recuerda si ya comió. Se despierta a las 3 de la madrugada y no sabe qué hacer. Se siente solo, aunque haya gente cerca. La familia no puede estar 24/7.
+Evo-2 is a revolutionary genomic AI model. The 40B version requires enterprise H100 GPUs (USD 30,000+). But the **7B version runs on consumer hardware**.
 
-**Asistente IA Geriátrico resuelve eso.**
+**This project demonstrates that you don't need an H100 to research genomic AI.**
 
-## ¿Qué hace?
+## Which GPU do I need?
 
-- **Lee** etiquetas, fechas de vencimiento, instrucciones de medicamentos en voz alta.
-- **Monitorea** glucosa (FreeStyle Libre 2) y alerta si hay riesgo de hipoglucemia.
-- **Detecta** caídas y emite alerta por voz.
-- **Recuerda** recetas, rutinas y conversaciones recientes.
-- **Orientación temporal**: "Son las 3 de la mañana. Es de noche. Mejor sigue durmiendo."
-- **Reconoce** personas: "Es tu hijo Juan. Vino a visitarte."
-- **Geocerca virtual**: si se aleja de casa, alerta y pregunta si quiere avisar a alguien.
-- **Buffer conversacional**: "¿Qué estaba diciendo?" → "Que querías flan."
+| GPU | VRAM | Runs Evo-2 7B? | Cost (used) |
+|-----|------|----------------|---------------|
+| RTX 3090 | 24 GB | ✅ Yes | USD 700–900 |
+| RTX 4090 | 24 GB | ✅ Yes | USD 1,200–1,500 |
+| H100 | 80 GB | ✅ 40B, 20B, 7B | USD 30,000+ |
 
-## ¿Por qué es diferente?
+## What speed can I expect?
 
-- **Habla con la voz que tu familiar elige.** No es una voz robótica. Es la voz de su hijo, su hija, su nieto.
-- **No necesita internet.** Funciona solo. No envía datos a la nube.
-- **No necesita configuración complicada.** La familia lo deja listo una vez.
-- **Cuesta menos de 100 USD.** Componentes existentes, sin licencias caras.
+| Hardware | Speed (nt/sec) | Confidence |
+|----------|-------------------|-----------|
+| H100 | 45 | ✅ Verified (NVIDIA) |
+| RTX 4090 | 30–40 | 🔲 Community reports |
+| RTX 3090 | 25–35 | 🔲 Estimated |
 
-## ¿Para quién es?
+## How much does a local setup cost?
 
-- Personas con Alzheimer o demencia senil.
-- Adultos mayores con retinopatía diabética (dificultad para leer).
-- Pacientes con diabetes tipo 2 que necesitan monitoreo continuo.
-- Familias que cuidan a un ser querido.
-- Residencias geriátricas.
+| Component | Price (used) |
+|------------|----------------|
+| RTX 3090 (24 GB) | USD 700–900 |
+| 64 GB RAM | USD 100 |
+| 1 TB NVMe SSD | USD 50 |
+| **Total** | **USD 850–1,050** |
 
-## Tecnología (todo existe, todo certificado)
+## What does NOT run on RTX 3090/4090?
 
-| Componente | Precio | Función |
-|------------|--------|---------|
-| Cámara OV2640 | USD 5 | Leer etiquetas, reconocer caras |
-| Giroscopio MPU-6050 | USD 2 | Detectar caídas |
-| Lector NFC | USD 10 | Conectar a FreeStyle Libre 2 |
-| ESP32 / nRF53 | USD 5-8 | Procesamiento local |
-| Batería | USD 3 | Autonomía 7 días |
-| Altavoz miniatura | USD 2 | Voz clara y cálida |
+- ❌ Evo-2 40B, 20B, 1B (require FP8, H100/H200)
+- ❌ Production-scale fine-tuning
+- ❌ Low-latency applications
 
-**Costo total estimado: USD 85**
+## Who is it for?
 
-## Estado actual
+- Budget-constrained labs.
+- Universities and research centers.
+- Students wanting to experiment with genomic AI.
+- Anyone who wants to run Evo-2 without spending USD 30,000.
 
-- Prototipo en evolución.
-- Utiliza equipamiento existente certificado.
-- No requiere validación adicional.
-- Documentación completa en el repositorio.
+## Next steps
 
-## Licencia
+1. Port Evo-2 7B to ARM systems (like CORPUS).
+2. Optimize power consumption for autonomous operation.
+3. Integrate with sensors and actuators for embedded AI.
 
-Copyright © 2026 Enrique Aguayo. Todos los derechos reservados.
+See [CORPUS](https://github.com/enriqueherbertag-lgtm/Corpus) for hardware architecture and specs.
 
-## Autor
+## Experiments
 
-Enrique Aguayo H. – Mackiber Labs
+The `experiments/` folder contains third-party code adaptations and proof-of-concept tests. See `experiments/flash-moe-reference/README.md` for details.
+
+## License
+
+Copyright © 2026 Enrique Aguayo. All rights reserved.
+
+This project is protected by copyright.
+
+**PERMITTED:**
+- Non-commercial use for educational or research purposes.
+- Distribution without modification, as long as this license is maintained and credit is given to the author.
+
+**PROHIBITED without express written authorization:**
+- Commercial use (including offering it as a service, SaaS, subscription, or any use that generates economic benefit).
+- Modification for production environments.
+- Distribution of modified versions without authorization.
+
+For commercial licenses or inquiries, contact: **eaguayo@migst.cl**
+
+## Author
+
+**Enrique Aguayo H.** – Mackiber Labs
