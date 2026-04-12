@@ -67,6 +67,19 @@ En la carpeta `experiments/` se encuentran adaptaciones de código de terceros y
 
 Copyright © 2026 Enrique Aguayo. Todos los derechos reservados.
 
+Este proyecto está protegido por derechos de autor.
+
+**PERMITIDO:**
+- Uso no comercial con fines educativos o de investigación.
+- Distribución sin modificación, siempre que se mantenga esta licencia y se dé crédito al autor.
+
+**PROHIBIDO sin autorización expresa por escrito:**
+- Uso comercial (incluyendo ofrecerlo como servicio, SaaS, suscripción, o cualquier uso que genere beneficio económico).
+- Modificación para entornos de producción.
+- Distribución de versiones modificadas sin autorización.
+
+Para licencias comerciales o consultas, contactar a: **eaguayo@migst.cl**
+
 ## Autor
 
-Enrique Aguayo H. – Mackiber Labs
+**Enrique Aguayo H.** – Mackiber Labs
